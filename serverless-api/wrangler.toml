@@ -1,12 +1,23 @@
 name = "serverless-api"
 type = "javascript"
 zone_id = ""
-account_id = ""
+account_id = "f9cdd33bf9929ff7ddddef278ccd6804"
 route = ""
 workers_dev = true
 compatibility_date = "2021-11-03"
+
+
+kv_namespaces = [ 
+         { binding = "SOCIALS_KV", preview_id = "689c0b4031f8415da1bdf72218254664", id = "06adf7c1905b4f74a4214b81316528f5" }
+]
 
 [build]
 command = "npm install && npm run build"
 [build.upload]
 format = "service-worker"
+
+# [env.production]
+# route = "www.billmvp73.dev/*"
+# kv_namespaces = [ 
+#          { binding = "SOCIALS_KV", preview_id = "689c0b4031f8415da1bdf72218254664", id = "06adf7c1905b4f74a4214b81316528f5" }
+# ]

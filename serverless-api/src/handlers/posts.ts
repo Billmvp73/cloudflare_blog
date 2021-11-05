@@ -9,6 +9,7 @@ const Posts = async () => {
     'Access-Control-Allow-Origin': '*',
     'Content-type': 'application/json'
   }
+  console.log("GET posts: ", body)
   return new Response(body, { headers })
 }
 
