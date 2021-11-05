@@ -2,12 +2,19 @@ export default class PostsStore {
   async all() {
     var _posts = []
     var id_str = await SOCIALS_KV.get('all');
-    var id: number = +id_str!;
+    var id: number;
+    if (await id_str == null) {
+      console.log("no all values?: ", id_str);
+      await SOCIALS_KV.put('all', "0");
+      id = 0;
+    }else{
+      id = +id_str!;
+    }
     console.log("all ids: ", id)
     for(let i = 0; i < id;i++){
       let post = await SOCIALS_KV.get(i.toString())
       console.log(await post)
-      _posts.push({"id": i, body: JSON.parse(await post!)})
+      _posts.push({"id": i, title: JSON.parse(await post!)["title"]})
     }
     console.log("all posts ", _posts)
     return _posts

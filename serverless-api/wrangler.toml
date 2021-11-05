@@ -8,7 +8,7 @@ compatibility_date = "2021-11-03"
 
 
 kv_namespaces = [ 
-         { binding = "SOCIALS_KV", preview_id = "689c0b4031f8415da1bdf72218254664", id = "06adf7c1905b4f74a4214b81316528f5" }
+         { binding = "SOCIALS_KV", preview_id = "22da71390170424b89acc0a9ac9f9d05", id = "9eb99b5423bb422c809e599e54272b78" }
 ]
 
 [build]

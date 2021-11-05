@@ -27,7 +27,7 @@ const Post = ({ id }) => {
         <em>Published {new Date(post.published_at).toLocaleString()}</em>
       </p> */}
       <p>
-        <Link to="/">Go back</Link>
+        <Link to="/posts">Go back</Link>
       </p>
     </div>
   );

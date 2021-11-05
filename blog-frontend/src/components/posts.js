@@ -13,7 +13,7 @@ const Posts = () => {
         }
       );
       const postsResp = await resp.json();
-      console.log(await postsResp)
+      console.log("get all posts: ", await postsResp)
       setPosts(postsResp);
     };
 
